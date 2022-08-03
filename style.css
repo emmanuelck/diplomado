@@ -11,10 +11,16 @@ body{
     font-weight: 300;
     line-height: 30px;
     color: #636369;
+    padding-top: 80px;
 }
 /*HELPERS*/
 .mt-100{
     margin-top: 100px;
+}
+.highlight{
+    color: #00b5b7;
+    font-weight: 800;
+    text-shadow: 1px 1px #dedede;
 }
 /*BORDES*/
 .info-box-1{
@@ -65,13 +71,17 @@ body{
 /*BUTTONS*/
 .btn-primary{
     border-radius: 0;
-    background-color: #457b9d;
-    border-color: #457b9d;
+    background-color: transparent;
+    border-color: #00b5b7;
+    color: #23003b;
     font-size: 12px;
+    border-radius: 30px;
+    margin-right: 5px;
 }
 .btn-primary:hover{
-    background: #1e2e4a;
-    border-color: #1e2e4a;
+    background: #00b5b7;
+    border-color: #00b5b7;
+    color: #fff;
 }
 /*LISTS*/
 ul{
@@ -133,7 +143,6 @@ h2.line-center:after{
     background: #ededed;
 }
 .bg-dark{
-    /* background-color: #1e2e4a !important; */
     background: linear-gradient(to right,#4ae9ff 0%, #00b5b7 100%);
     color: #fff;
 }
@@ -143,13 +152,16 @@ h2.line-center:after{
 }
 /*NAVBAR*/
 .navbar{
-    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%);
 }
 .navbar.bg-light{
     background-color: #fff !important;
 }
 .navbar-brand img{
     height: 60px;
+}
+.nav-item{
+    margin: 0;
 }
 .nav-link{
     color: #23003b;
@@ -169,6 +181,7 @@ header:after{
     content: '';
     width: 800px;
     height: 800px;
+    border-radius: 50%;
     background: #f1faee;
     position: absolute;
     top: 50%;
@@ -220,6 +233,19 @@ header h1 span{
     height: 50px;
     font-weight: 100;
     color: #23003b;
+    text-decoration: none;
+}
+.info-content a{
+    background: rgba(255,255,255,.2);
+    padding: 5px 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.info-content a:hover{
+    background: rgba(255,255,255,.4);
 }
 .info-content-title{
     display: block;
@@ -235,6 +261,10 @@ header h1 span{
         font-size: 50px;
         margin-bottom: 10px;
     }
+}
+.fundamentos{
+    overflow: hidden;
+    position: relative;
 }
 /*OBJETIVOS*/
 .box-white{
@@ -345,4 +375,105 @@ header h1 span{
         padding-top: 150px;
         padding-bottom: 150px;
     }
+}
+
+/*CIRCLES HEADER*/
+.loader {
+    max-width: 15rem;
+    width: 100%;
+    height: auto;
+    stroke-linecap: round;
+    position: absolute;
+    z-index:6;
+    left: 0;
+    bottom: 0;
+    transform: scale(3) rotate(40deg);
+    opacity: .2;
+}
+
+.fundamentos .loader{
+    left: initial;
+    right: 0;
+    bottom: 0;
+    transform: scale(2) rotate(40deg);
+    opacity: .5;
+}
+
+circle {
+    fill: none;
+    stroke-width: 3.5;
+    -webkit-animation-name: preloader;
+    animation-name: preloader;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-transform-origin: 170px 170px;
+    transform-origin: 170px 170px;
+    will-change: transform;
+}
+circle:nth-of-type(1) {
+    stroke-dasharray: 550;
+}
+circle:nth-of-type(2) {
+    stroke-dasharray: 500;
+}
+circle:nth-of-type(3) {
+    stroke-dasharray: 450;
+}
+circle:nth-of-type(4) {
+    stroke-dasharray: 300;
+}
+circle:nth-of-type(1) {
+    -webkit-animation-delay: -0.15s;
+    animation-delay: -0.15s;
+}
+circle:nth-of-type(2) {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+circle:nth-of-type(3) {
+    -webkit-animation-delay: -0.45s;
+    animation-delay: -0.45s;
+}
+circle:nth-of-type(4) {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+ @-webkit-keyframes preloader {
+ 50% {
+ -webkit-transform: rotate(360deg);
+ transform: rotate(360deg);
+}
+}
+ @keyframes preloader {
+ 50% {
+ -webkit-transform: rotate(360deg);
+ transform: rotate(360deg);
+}
+}
+
+/*OWL*/
+
+.owl-stage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.owl-dot span{
+    width: 10px;
+    height: 10px;
+    background: #c4c4c4;
+    display: block;
+    border-radius: 50px;
+    margin: 0 10px;
+    transition: all .5s ease;
+}
+.owl-dot.active span{
+    background: #00b5b7;
+    width: 50px;
+    transition: all .5s ease;
 }
