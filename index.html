@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <div class="logo-whatsapp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/479px-WhatsApp.svg.png" alt="">
+    </div>
     <nav class="navbar fixed-top navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -43,6 +46,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Requisitos de ingreso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Estructura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Docentes</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary mt-1" href="#">Postular</a>
@@ -400,7 +409,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="link-vermas">Ver más</a>
+                            <a href="#tamaraLopez" class="link-vermas" data-bs-toggle="modal" data-bs-target="#tamaraLopez">Ver más</a>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-12 col-xl-6 mb-5 wow slideInUp" style="animation-delay: .2s;">
@@ -631,6 +640,52 @@
     </div>
 </div>
 
+<div class="footer">
+    <div class="container section-padding">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 text-center px-5 pb-5 px-sm-0 pb-sm-0 d-flex justify-content-between">
+                <img style="align-self:center;" width="150" src="https://cipp.usach.cl/wp-content/uploads/2021/07/Logo-USACH-1.png" alt="">
+                <img style="align-self:center;" width="80" src="https://circularmente.cl/img/logo-footer.png" alt="">
+            </div>
+            <div class="col-12 col-sm-6 col-md-8 col-lg-8 col-xl-9 text-center text-sm-end pt-5 pt-sm-0">
+                <a href="#"><i class="fa-solid fa-envelope"></i> economiacircular@usach.cl</a>
+                <br>
+                <a href="#"><i class="fa-solid fa-mobile-screen-button"></i> +569 5018 1073</a>
+            </div>
+        </div>
+    </div>
+    <div class="copy pt-3 pb-3 text-center">
+        <p>©2022 – Diplomado Economía Circular USACH</p>
+    </div>
+</div>
+
+<!-- MODALES -->
+<div class="modal fade bio-modal" id="tamaraLopez" tabindex="-1" aria-labelledby="tamaraLopezLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tamaraLopezLabel">Biografía Docente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-content">
+                    <div class="modal-body-content-thumb">
+                        <img src="https://images.generated.photos/b83ddic4uEncSt9mPZk6MWh7RkjMOOOD9mVUn1P1u2A/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTQzMDE0LmpwZw.jpg" alt="">
+                    </div>
+                    <div class="ratio ratio-16x9 mb-4">
+                        <iframe class="youtube-video" width="100%" src="http://www.youtube.com/embed/PKlmff2TDl4?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0"></iframe>
+                    </div>
+                    <h3>Tamara López Burgos </h3>
+                    <p>Docente de Pre y Postgrado en Diseño Sustentable en la Universidad Mayor y USACH. Facilitadora de los módulos de Biomímesis del diplomado de Ecodiseño y Economía Circular de la Universidad de Chile (2021 – 2022). Actualmente dirige Circularmente, consultora enfocada en el aceleramiento de la implementación de la Economía Circular y Regenerativa, Innovación, Transferencia Tecnológica y Gestión Ambiental. Diseñadora Industrial y Magíster en Gestión y Ordenamiento Ambiental.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary stop-video" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -655,6 +710,10 @@
                 items:1
             }
         }
+    });
+
+    $(".modal").on("hidden.bs.modal", function (e) {
+        $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
     });
 
 </script>

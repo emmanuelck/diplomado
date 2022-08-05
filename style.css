@@ -83,6 +83,20 @@ body{
     border-color: #00b5b7;
     color: #fff;
 }
+.btn-secondary{
+    border-radius: 0;
+    background-color: rgba(255,255,255,.5);
+    border-color: #00b5b7;
+    color: #23003b;
+    font-size: 12px;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+.btn-secondary:hover{
+    background: rgba(255,255,255,1);
+    border-color: #00b5b7;
+    color: #23003b;
+}
 /*LISTS*/
 ul{
     margin: 0;
@@ -179,17 +193,15 @@ header{
 }
 header:after{
     content: '';
-    width: 800px;
-    height: 800px;
+    width: 1014px;
+    height: 1014px;
     border-radius: 50%;
     background: #f1faee;
     position: absolute;
-    top: 50%;
-    left: -200px;
-    bottom: 0;
+    top: 0;
+    left: -420px;
     z-index: 5;
-    transform: rotate(-10deg);
-    margin-top: -400px;
+    margin-top: -200px;
 }
 header h1{
     width: 260px;
@@ -404,8 +416,8 @@ circle {
     stroke-width: 3.5;
     -webkit-animation-name: preloader;
     animation-name: preloader;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
@@ -476,4 +488,93 @@ circle:nth-of-type(4) {
     background: #00b5b7;
     width: 50px;
     transition: all .5s ease;
+}
+
+/*BIO MODAl*/
+
+.bio-modal .modal-header,
+.bio-modal .modal-footer{
+    border: none;
+}
+.bio-modal .modal-header{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+.bio-modal .modal-footer{
+    padding-right: 40px;
+    padding-bottom: 25px;
+}
+.bio-modal .modal-header h5{
+    font-weight: 300;
+    color: #565656;
+    padding-left: 50px;
+}
+.bio-modal .modal-body-content{
+    width: 100%;
+    background: #fff;
+    color: #565656;
+    padding: 80px 40px 40px;
+    box-shadow: -10px 15px 20px 10px rgba(0,0,0,.1);
+}
+
+@media (min-width: 768px){
+    .bio-modal .modal-body-content{
+        width: 500px;
+        position: relative;
+        left: 50px;
+    }
+}
+
+.bio-modal .modal-body-content-thumb{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -50px;
+
+}
+.bio-modal .modal-body-content-thumb img{
+    width: 100%;
+}
+.bio-modal .modal-body-content h3{
+    font-weight: 300;
+    font-size: 22px;
+}
+.bio-modal .modal-body-content p{
+    font-size: 14px;
+    line-height: 26px;
+}
+
+/*FOOTER*/
+.footer{
+    background: #23003b;
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer i{
+    color: #00b5b7;
+    margin-right: 10px;
+}
+.footer .copy{
+    background: #130d18;
+    color: #fff;
+}
+.footer .copy p{
+    margin: 0;
+    color: #565656;
+}
+
+/*WHATSAPP*/
+.logo-whatsapp{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 30;
+}
+.logo-whatsapp img{
+    width: 100px;
 }
