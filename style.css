@@ -18,7 +18,7 @@ body{
     margin-top: 100px;
 }
 .highlight{
-    color: #00b5b7;
+    color: rgb(0 180 184);
     font-weight: 800;
     text-shadow: 1px 1px #dedede;
 }
@@ -72,21 +72,21 @@ body{
 .btn-primary{
     border-radius: 0;
     background-color: transparent;
-    border-color: #00b5b7;
+    border-color: rgb(0 180 184);
     color: #23003b;
     font-size: 12px;
     border-radius: 30px;
     margin-right: 5px;
 }
 .btn-primary:hover{
-    background: #00b5b7;
-    border-color: #00b5b7;
+    background: rgb(0 180 184);
+    border-color: rgb(0 180 184);
     color: #fff;
 }
 .btn-secondary{
     border-radius: 0;
     background-color: rgba(255,255,255,.5);
-    border-color: #00b5b7;
+    border-color: rgb(0 180 184);
     color: #23003b;
     font-size: 12px;
     border-radius: 30px;
@@ -94,7 +94,7 @@ body{
 }
 .btn-secondary:hover{
     background: rgba(255,255,255,1);
-    border-color: #00b5b7;
+    border-color: rgb(0 180 184);
     color: #23003b;
 }
 /*LISTS*/
@@ -103,7 +103,7 @@ ul{
     padding: 0;
 }
 ul li{
-    color: #00b5b7;
+    color: rgb(0 180 184);
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 8px;
@@ -159,7 +159,7 @@ h2.line-center:after{
     background: #ededed;
 }
 .bg-dark{
-    background: linear-gradient(to right,#4ae9ff 0%, #00b5b7 100%);
+    background: linear-gradient(to right,#4ae9ff 0%, rgb(0 180 184) 100%);
     color: #fff;
     box-shadow: 0 0 10px 5px rgba(0,0,0,.1);
     z-index: 10;
@@ -180,6 +180,9 @@ h2.line-center:after{
 }
 .nav-item{
     margin: 0;
+}
+.nav-item .btn-primary{
+    font-size: 16px;
 }
 .nav-link{
     color: #23003b;
@@ -209,23 +212,24 @@ header:after{
 }
 header h1{
     width: 260px;
-    color: #00b5b7;
+    color: rgb(0 180 184);
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 45px;
-    line-height: 35px;
+    font-size: 55px;
+    line-height: 45px;
     position: relative;
     z-index: 10;
 }
 header h1 span{
     font-weight: 300;
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 22px;
     display: block;
 }
 /*INFO*/
 .info-box{
     color: #fff;
-    padding: 30px 0;
+    padding: 10px 0;
     overflow: hidden;
 }
 .info-icon{
@@ -247,7 +251,7 @@ header h1 span{
     justify-content: center;
     align-items: center;
     height: 50px;
-    font-weight: 100;
+    font-weight: 300;
     color: #23003b;
     text-decoration: none;
 }
@@ -279,6 +283,7 @@ header h1 span{
     }
 }
 .fundamentos{
+    padding: 100px 0;
     overflow: hidden;
     position: relative;
 }
@@ -288,6 +293,11 @@ header h1 span{
     padding: 60px;
     color: #636369;
 }
+.box-dark{
+    background: #23003b;
+    padding: 60px;
+    color: #fff;
+}
 
 /*MODULOS*/
 .modulo-box{
@@ -296,6 +306,8 @@ header h1 span{
     position: relative;
     overflow: hidden;
     transition: all .2s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 .modulo-box:hover{
     transform: scale(1.05);
@@ -303,6 +315,21 @@ header h1 span{
     z-index: 10;
     transition: all .2s ease-in-out;
 }
+.modulo-box-icon{
+    width: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 100%;
+    box-shadow: inset 0 0 10px 2px rgba(0,0,0,.3);
+    background: rgb(0 180 184);
+    display: flex;
+    justify-content: center;
+}
+.modulo-box-icon img{
+    align-self: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+} 
 .modulo-box-content{
     padding: 20px;
 }
@@ -314,7 +341,7 @@ header h1 span{
     display: block;
     font-size: 14px;
     font-weight: 800;
-    color: #00b5b7;
+    color: rgb(0 180 184);
 }
 .modulo-box p{
     line-height: 20px;
@@ -420,8 +447,8 @@ circle {
     stroke-width: 3.5;
     -webkit-animation-name: preloader;
     animation-name: preloader;
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
@@ -470,7 +497,10 @@ circle:nth-of-type(4) {
  transform: rotate(360deg);
 }
 }
-
+/*OWL FUNDAMENTOS*/
+.owl-fundamentos .item{
+    text-align: left;
+}
 /*OWL*/
 
 .owl-stage{
@@ -489,7 +519,7 @@ circle:nth-of-type(4) {
     transition: all .5s ease;
 }
 .owl-dot.active span{
-    background: #00b5b7;
+    background: rgb(0 180 184);
     width: 50px;
     transition: all .5s ease;
 }
@@ -513,6 +543,9 @@ circle:nth-of-type(4) {
     font-weight: 300;
     color: #565656;
     padding-left: 50px;
+}
+.bio-modal .modal-content{
+    overflow: visible;
 }
 .bio-modal .modal-body-content{
     width: 100%;
@@ -560,7 +593,7 @@ circle:nth-of-type(4) {
     text-decoration: none;
 }
 .footer i{
-    color: #00b5b7;
+    color: rgb(0 180 184);
     margin-right: 10px;
 }
 .footer .copy{
@@ -580,7 +613,7 @@ circle:nth-of-type(4) {
     z-index: 30;
 }
 .logo-whatsapp img{
-    width: 100px;
+    width: 80px;
 }
 
 /* .circle-icon-center{
@@ -786,3 +819,18 @@ circle:nth-of-type(4) {
 	.st13{opacity:0.2;}
 	.st14{clip-path:url(#SVGID_16_);}
 	.st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
+
+
+
+    .proposito h2{
+        margin-bottom: 25px;
+    }
+    .proposito p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .perfil-candidatos ul li{
+        font-size: 12px;
+        line-height: 20px;
+    }
