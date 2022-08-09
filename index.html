@@ -103,15 +103,26 @@
                 <div class="wow fadeInUp col-12 col-md-6 col-xl-3 d-flex align-items-center justify-content-center flex-md-column pb-3 pt-3 info-box-4" style="animation-delay: .6s;">
                     <div class="info-content text-center">
                         <span class="info-content-title">Clases</span>
-                        <p>Martes y jueves <br>18:00 a 20:00</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <small>Mar y Miér</small>
+                                <p>11:00 a 13:00</p>
+                            </div>
+                            <div class="col-6">
+                                <small>Sábado</small>
+                                <p>09:00 a 13:00</p>
+                            </div>
+                        </div>
+                        
+                        
                     </div>
                 </div>
                 
                 <div class="wow fadeInUp col-6 col-xl-2 d-flex align-items-center justify-content-center flex-md-column pb-3 pt-3 info-box-5" style="animation-delay: .8s;">
                     <div class="info-content text-center">
                         <span class="info-content-title">Precio</span>
-                        <p>Valor y descuentos</p>
-                        <a href="#">Ver más</a>
+                        <p>Valores y descuentos</p>
+                        <a href="#valores-descuentos" data-bs-toggle="modal" data-bs-target="#valores-descuentos">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -711,7 +722,7 @@
 </div>
 
 <!-- MODALES -->
-<div class="modal fade bio-modal" id="tamaraLopez" tabindex="-1" aria-labelledby="tamaraLopezLabel" aria-hidden="true">
+<div class="modal fade bio-modal custom-modal" id="tamaraLopez" tabindex="-1" aria-labelledby="tamaraLopezLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content bg-dark">
             <div class="modal-header">
@@ -732,6 +743,63 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary stop-video" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade valores-descuentos custom-modal" id="valores-descuentos" tabindex="-1" aria-labelledby="valores-descuentosLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-darker">
+            <div class="modal-header">
+                <h5 class="modal-title" id="valores-descuentosLabel">Valores y descuentos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, magni cum! Beatae cum sit iste libero tempora? Veritatis sint illo voluptate dolorem obcaecati illum. Et tempora fugiat quibusdam ipsa saepe?</p>
+                <div class="row align-items-center">
+                    <div class="col-5 pe-5 text-end">
+                        <h4>Valores:</h4>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li><span>Valor matrícula: <strong>$64.000</strong></span></li>
+                            <li><span>Valor arancel: <strong>$1.200.000</strong></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row align-items-center">
+                    <div class="col-5 pe-5 text-end">
+                        <h4>Descuentos:</h4>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li><span>Ex alumnos USACH: <strong>10% de dcto</strong> <span>*</span> </span></li>
+                            <li><span>Pago del total del arancel en <strong>1 cuota: 10% de dcto</strong> <span>*</span> </span></li>
+                            <li><span>Funcionarios públicos: <strong>20% de dcto</strong></span></li>
+                        </ul>
+                        <small><span>*</span> Acumulables</small>
+                    </div>
+                </div>
+                <hr>
+                <div class="row align-items-center">
+                    <div class="col-5 pe-5 text-end">
+                        <h4>Métodos de pago:</h4>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li><span>Débito</span></li>
+                            <li><span>Crédito</span></li>
+                            <li><span>Transferencia/Depósito</span></li>
+                            <li><span>Cheques</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>

@@ -526,28 +526,28 @@ circle:nth-of-type(4) {
 
 /*BIO MODAl*/
 
-.bio-modal .modal-header,
-.bio-modal .modal-footer{
+.custom-modal .modal-header,
+.custom-modal .modal-footer{
     border: none;
 }
-.bio-modal .modal-header{
+.custom-modal .modal-header{
     padding-top: 50px;
     padding-bottom: 50px;
     padding-right: 50px;
 }
-.bio-modal .modal-footer{
+.custom-modal .modal-footer{
     padding-right: 40px;
     padding-bottom: 25px;
 }
-.bio-modal .modal-header h5{
+.custom-modal .modal-header h5{
     font-weight: 300;
     color: #565656;
     padding-left: 50px;
 }
-.bio-modal .modal-content{
+.custom-modal .modal-content{
     overflow: visible;
 }
-.bio-modal .modal-body-content{
+.custom-modal .modal-body-content{
     width: 100%;
     background: #fff;
     color: #565656;
@@ -556,14 +556,14 @@ circle:nth-of-type(4) {
 }
 
 @media (min-width: 768px){
-    .bio-modal .modal-body-content{
+    .custom-modal .modal-body-content{
         width: 500px;
         position: relative;
         left: 50px;
     }
 }
 
-.bio-modal .modal-body-content-thumb{
+.custom-modal .modal-body-content-thumb{
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -572,18 +572,37 @@ circle:nth-of-type(4) {
     top: -50px;
 
 }
-.bio-modal .modal-body-content-thumb img{
+.custom-modal .modal-body-content-thumb img{
     width: 100%;
 }
-.bio-modal .modal-body-content h3{
+.custom-modal .modal-body-content h3{
     font-weight: 300;
     font-size: 22px;
 }
-.bio-modal .modal-body-content p{
+.custom-modal .modal-body-content p{
     font-size: 14px;
     line-height: 26px;
 }
-
+.modal .bg-darker h5{
+    color: #fff;
+}
+.modal .bg-darker .modal-body{
+    background: #fff;
+    color: #23003b;
+    width: 120%;
+    margin-left: -10%;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.2);
+    padding: 50px;
+    border-radius: 10px;
+}
+.modal .bg-darker .modal-body h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0 180 184);
+}
+.modal .bg-darker .modal-body small{
+    color: #636369;
+}
 /*FOOTER*/
 .footer{
     background: #23003b;
