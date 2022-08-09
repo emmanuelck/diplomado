@@ -287,6 +287,22 @@ header h1 span{
     overflow: hidden;
     position: relative;
 }
+/*VIDEOS*/
+.link-video{
+    text-decoration: none;
+    position: relative;
+}
+.link-video span{
+    background: rgb(0,180,184);
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 14px;
+    padding: 10px;
+    position: relative;
+    left: 20px;
+    margin-top: -30px;
+}
 /*OBJETIVOS*/
 .box-white{
     background: #ffffff;
