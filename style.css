@@ -69,6 +69,7 @@ body{
     }
 }
 /*BUTTONS*/
+
 .btn-primary{
     border-radius: 0;
     background-color: transparent;
@@ -77,6 +78,7 @@ body{
     font-size: 12px;
     border-radius: 30px;
     margin-right: 5px;
+    background: #fff;
 }
 .btn-primary:hover{
     background: rgb(0 180 184);
@@ -96,6 +98,42 @@ body{
     background: rgba(255,255,255,1);
     border-color: rgb(0 180 184);
     color: #23003b;
+}
+.btn-primary.btn-highlight{
+    background: #23003b;
+    border-color: #23003b;
+    color: #fff;
+}
+.btn-postular{
+    color: #fff;
+    border-color: rgb(0,128,142);
+    background: transparent;
+    font-size: 22px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.btn-postular-dark{
+    color: #23003b;
+    background: transparent;
+    font-size: 22px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.btn:active,
+.btn:focus{
+    background: inherit;
+    color: inherit !important;
+    border-color: inherit;
+    box-shadow: none;
+}
+.btn-download{
+    font-size: 18px;
+    padding: 10px 30px;
+}
+.btn-download span{
+    margin: 0 20px;
 }
 /*LISTS*/
 ul{
@@ -177,6 +215,14 @@ h2.line-center:after{
 }
 .navbar-brand img{
     height: 60px;
+}
+.navbar-nav .btn-primary{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin-left: 5px;
 }
 .nav-item{
     margin: 0;
@@ -305,6 +351,7 @@ header h1 span{
 /*OBJETIVOS*/
 .objetivos{
     position: relative;
+    overflow: hidden;
 }
 .objetivos .loader{
     opacity: .05;
@@ -526,6 +573,7 @@ circle:nth-of-type(4) {
 /*OWL FUNDAMENTOS*/
 .owl-fundamentos .item{
     text-align: left;
+    padding: 5px;
 }
 /*OWL ICONOS*/
 .owl-icons{
@@ -943,11 +991,8 @@ circle:nth-of-type(4) {
         font-weight: 500;
         color: #23003b;
     }
-    form .btn-primary{
-        background: #23003b;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 800;
-        padding-top: 15px;
-        padding-bottom: 15px;
+
+    .form-check-label{
+        font-size: 11px;
+        line-height: 12px;
     }

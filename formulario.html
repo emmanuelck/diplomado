@@ -42,10 +42,7 @@
                         <a class="nav-link" href="#">Propósito</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Perfil candidatos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Requisitos de ingreso</a>
+                        <a class="nav-link" href="#">Perfil de candidatos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Estructura</a>
@@ -54,10 +51,10 @@
                         <a class="nav-link" href="#">Docentes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="#">Postular</a>
+                        <a class="btn btn-primary" href="#modal-masinfo" data-bs-toggle="modal" data-bs-target="#modal-masinfo" >Más Información <i class="fa-solid fa-circle-plus"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="#">Solicita más información</a>
+                        <a class="btn btn-primary btn-highlight" href="formulario.html">Postular <i class="fa-solid fa-thumbs-up"></i></a>
                     </li>
                 </ul>
             </div>
@@ -102,7 +99,7 @@
                         </div>
                         <div class="col-6">
                             <div class="info-general-box">
-                            <p><strong>Valor Master</strong></p>
+                            <p><strong>Valor Diplomado</strong></p>
                             <p>$1.200.000</p>
                         </div>
                         </div>
@@ -111,43 +108,45 @@
                         <div class="col-6">
                             <div class="info-general-box">
                             <p><strong>Fecha de inicio</strong></p>
-                            <p>7 de octubre de 2022</p>
+                            <p>Septiembre de 2022</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="info-general-box">
                             <p><strong>Fecha de término</strong></p>
-                            <p>31 de octubre de 2022</p>
+                            <p>Enero 2023</p>
                         </div>
                         </div>
                         
                     </div>
                     <div class="row">
+                        <!-- <div class="col-12">
+                            <div class="info-general-box">
+                                <p><strong>Plazo de preinscripción</strong></p>
+                                <p>Entre el 24 de agosto y el 10 de octubre de 2021</p>
+                            </div>
+                        </div> -->
                         <div class="col-12">
                             <div class="info-general-box">
-                            <p><strong>Plazo de preinscripción</strong></p>
-                            <p>Entre el 24 de agosto y el 10 de octubre de 2021</p>
-                        </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="info-general-box">
-                            <p><strong>Proceso de admisión</strong></p>
-                            <p>Entre el 15 de septiembre y el 10 de octubre de 2021</p>
-                        </div>
+                                <p><strong>Proceso de admisión</strong></p>
+                                <p>Postulaciones: Desde el 15 de agosto al 10 de septiembre</p>
+                            </div>
                         </div>
                         <div class="col-12">
                             <div class="info-general-box">
-                            <p><strong>Plazo de matriculación</strong></p>
-                            <p>Entre el 21 de septiembre y el 10 de octubre de 2021</p>
-                        </div>
+                                <p><strong>Plazo de matriculación</strong></p>
+                                <p>Desde el 01 al 15 de septiembre</p>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="info-general-box">
-                            <p><strong>Adicional</strong></p>
-                            <p>La Universidad de Santiago de Chile ofrece por cada módulo cursado dentro del Master un título adicional de diplomado con un coste de 600 euros (valor de referencia por diplomado 1.200 euros).</p>
-                        </div>
+                                <p><strong>Requisitos de ingreso</strong></p>
+                                <p>Estar en posesión de un título de educación superior y presentar carta motivacional para postular al Diplomado, además de los documentos formales.</p>
+                                <!-- <p><strong>Adicional</strong></p>
+                                <p> La Universidad de Santiago de Chile otorgará a cada participante que haya cursado al menos el 75% de las clases sincrónicas, un diploma que certifique la participación en Diplomado de Economía Circular USACH. La fecha de inicio del diplomado, dependerá de la cantidad de alumnos inscritos en éste.</p> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -223,7 +222,7 @@
                             </div>
                             <hr>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar postulación</button>
+                        <button type="submit" class="btn btn-primary btn-postular btn-highlight">Enviar postulación <i class="fa-solid fa-right-long"></i></button>
                       </form>
                 </div>
                 
@@ -257,7 +256,51 @@
         </div>
     </div>
 
-
+    <div class="modal fade modal-masinfo custom-modal" id="modal-masinfo" tabindex="-1" aria-labelledby="modal-masinfoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-darker">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-masinfoLabel">Más información</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12">
+                        <form>
+                            <div class="row">
+                                <div class="mb-3 col-12">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="email" class="form-label">Correo *</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="nombre" class="form-label">País de residencia</label>
+                                    <input type="text" class="form-control" id="nombre">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="aceptoRecibirMasInfo">
+                                        <label class="form-check-label" for="aceptoRecibirMasInfo">Acepto recibir información sobre cursos y formación continua USACH y UCM. Al facilitar tus datos, aceptas que la Universidad de Santiago y la Universidad Complutense de Madrid almacenen y procesen la información personal enviada.</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-download"><i class="fa-solid fa-file-pdf"></i> <span>Descargar brochure</span> <i class="fa-solid fa-down-long"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
