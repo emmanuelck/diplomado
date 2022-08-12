@@ -225,6 +225,22 @@ h2.line-center:after{
 .bg-darker{
     background-color: #06bbc4;
     color: #ffffff;
+    position: relative;
+}
+.bg-darker:after{
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(cartographer.png);
+    z-index: 0;
+    position: absolute;
+    opacity: .4;
+}
+.bg-darker > *{
+    z-index: 10;
+    position: relative;
 }
 /*NAVBAR*/
 .navbar{
@@ -281,30 +297,55 @@ h2.line-center:after{
 }
 /*HEADER*/
 header{
-    background: #f1faee url('https://usach.cl/sites/default/files/styles/slideshow100_/public/Sub---Facultades3.jpg?itok=9QZkZGF_');
+    background: url('https://images.unsplash.com/photo-1574169208538-4f45163ade8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2380&q=80');
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
+    /* background: #f1faee;
+    background-size: cover;
+     */
     height: 450px;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
 }
-header:after{
+/* header:after{
     content: '';
     width: 1014px;
     height: 1014px;
     border-radius: 50%;
-    background: #f1faee;
+    background: #ffffff;
     position: absolute;
     top: 0;
     left: -420px;
     z-index: 5;
     margin-top: -200px;
+} */
+header:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+
+    background-color: #00B4B8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='100' stroke-opacity='0' %3E%3Ccircle fill='%2300B4B8' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%2300b0b4' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2300adb1' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%2300a9ad' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%2300a5a9' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%2300a1a5' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23009da1' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%2300999d' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23009598' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23009194' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23008c8f' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%2300888b' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23008386' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23007e81' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%2300797b' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23007476' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23006e70' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%2300686A' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+    opacity: .8;
+}
+header > *{
+    position: relative;
+    z-index: 5 !important;
 }
 header h1{
     width: 260px;
-    color: rgb(0 180 184);
+    /* color: rgb(0 180 184); */
+    color: #fff;
     font-weight: 800;
     text-transform: uppercase;
     font-size: 55px;
@@ -317,6 +358,15 @@ header h1 span{
     font-size: 22px;
     line-height: 22px;
     display: block;
+}
+header p{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 100;
+}
+header p span{
+    color: #fff !important;
+    text-shadow: 1px 1px #f90 !important;
 }
 /*INFO*/
 .info-box{
@@ -411,11 +461,27 @@ header h1 span{
     background: #ffffff;
     padding: 60px;
     color: #636369;
+    position: relative;
 }
 .box-dark{
     background: #23003b;
     padding: 30px;
     color: #fff;
+}
+.box-dark:after{
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(cartographer.png);
+    z-index: 0;
+    position: absolute;
+    opacity: .8;
+}
+.box-dark > *{
+    z-index: 10;
+    position: relative;
 }
 @media (min-width:992px){
     .box-dark{
@@ -447,7 +513,26 @@ header h1 span{
     background: rgb(0 180 184);
     display: flex;
     justify-content: center;
+    position: relative;
 }
+
+.modulo-box-icon:after{
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(cartographer.png);
+    z-index: 0;
+    position: absolute;
+    opacity: .3;
+}
+.modulo-box-icon > *{
+    z-index: 10;
+    position: relative;
+}
+
+
 .modulo-box-icon img{
     align-self: center;
     flex-grow: 0;
