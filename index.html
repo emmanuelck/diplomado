@@ -51,7 +51,7 @@
                         <a class="nav-link" href="#">Docentes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="#modal-masinfo" data-bs-toggle="modal" data-bs-target="#modal-masinfo" >Más Información <i class="fa-solid fa-circle-plus"></i></a>
+                        <a class="btn btn-primary bubbly-button" href="#modal-masinfo" data-bs-toggle="modal" data-bs-target="#modal-masinfo" >Más Información <i class="fa-solid fa-circle-plus"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary btn-highlight" href="formulario.html">Postular <i class="fa-solid fa-thumbs-up"></i></a>
@@ -79,7 +79,7 @@
     <div class="info-box bg-dark">
         <div class="container">
             <div class="row g-0 justify-content-center">
-                <div class="wow fadeInUp col-6 col-lg-4 col-xl-2 d-flex align-items-center justify-content-end flex-md-column pb-3 pt-3 info-box-1">
+                <div class="wow fadeInUp col-6 col-lg-4 col-xl-2 d-flex align-items-center justify-content-center justify-content-md-end flex-md-column pb-3 pt-3 info-box-1">
                     <div class="info-content text-center">
                         <span class="info-content-title">Duración</span>
                         <p>180 horas</p>
@@ -98,7 +98,7 @@
                         <p>Septiembre 2022 <br>a Enero 2023</p>
                     </div>
                 </div>
-                <div class="wow fadeInUp col-12 col-md-6 col-xl-3 d-flex align-items-center justify-content-end flex-md-column pb-3 pt-3 info-box-4" style="animation-delay: .6s;">
+                <div class="wow fadeInUp col-12 col-md-6 col-xl-3 d-flex align-items-center justify-content-center justify-content-md-end flex-md-column pb-3 pt-3 info-box-4" style="animation-delay: .6s;">
                     <div class="info-content text-center">
                         <span class="info-content-title">Clases</span>
                         <div class="row g-0">
@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 
-                <div class="wow fadeInUp col-6 col-xl-2 d-flex align-items-center justify-content-end flex-md-column pb-3 pt-3 info-box-5" style="animation-delay: .8s;">
+                <div class="wow fadeInUp col-6 col-xl-2 d-flex align-items-center justify-content-center justify-content-md-end flex-md-column pb-3 pt-3 info-box-5" style="animation-delay: .8s;">
                     <div class="info-content text-center">
                         <span class="info-content-title">Precio</span>
                         <p>Valores y descuentos</p>
@@ -134,8 +134,8 @@
             <circle cx="170" cy="170" r="85" stroke="#f90"/>
         </svg>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-10 col-xl-4 text-center">
+            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                <div class="col-10 col-md-6 col-lg-4 text-center">
                     <div class="arrow-icon-center">
                         <h2 class="wow fadeInUp">Fundamentos</h2>
                         <div class="arrow-title wow rotation-arrow-2" style="animation-delay: .5s;">
@@ -237,12 +237,12 @@
     <div class="container">
         <div class="row g-0 justify-content-center ">
             
-            <div class="col-12 col-xl-6 px-5">
+            <div class="col-12 col-xl-6 px-md-5">
                 <div class="text-center wow fadeInUp">
                     <p>Desarrollar en actores del sector productivo, público y privado, tomadores de decisión, emprendedores, educadores y elaboradores de políticas, los conocimientos y competencias para apoyar la implementación del enfoque de la Economía Circular en los sistemas productivos y entidades públicas, para adecuarse a los requerimientos que demanda la ciudadanía de la economía del Siglo XXI en un contexto post pandemia, de reconfiguración de mercados y cadenas logísticas y de la Emergencia Climática.</p>
                 </div>
             </div>
-            <div class="col-12 col-xl-6 px-5">
+            <div class="col-12 col-xl-6 px-md-5">
                 <div class="text-center wow fadeInUp">
                     <p>De esta manera, se espera complementar la formación de los participantes para asumir el desafío de transformarse en agentes de cambio de los modelos de producción, distribución y consumo de bienes y servicios y para el desarrollo de territorios y comunidades resilientes, como una respuesta racional para hacer frente a la crisis socio-ambiental y climática.</p>
                 </div>
@@ -1061,8 +1061,18 @@
         items:2,
         loop:true,
         margin:0,
+        dots: false,
         responsive:{
             0:{
+                items:3
+            },
+            576:{
+                items:4
+            },
+            768:{
+                items:5
+            },
+            992:{
                 items:6
             }
         }
@@ -1072,6 +1082,22 @@
         $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
     });
 
+    var animateButton = function(e) {
+        e.preventDefault;
+        //reset animation
+        e.target.classList.remove('animate');
+
+        e.target.classList.add('animate');
+        setTimeout(function(){
+        e.target.classList.remove('animate');
+        },700);
+    };
+
+    var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+    for (var i = 0; i < bubblyButtons.length; i++) {
+        bubblyButtons[i].addEventListener('click', animateButton, false);
+    }
 </script>
 </body>
 
